@@ -1,5 +1,6 @@
 :root {
-    --text-color:  #000000;
+    --text-color: #000000;
+    --card-front-color: rgb(159, 237, 241);
     --card-front-color: rgb(159, 237, 241);
     --card-back-color: #aaf1e2;
 }
@@ -10,7 +11,7 @@ body {
 }
 
 #container {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 4rem;
@@ -18,19 +19,21 @@ body {
 }
 
 .cartao {
-    margin: 1rem 1rem;
+    margin: 1rem;
     height: 20rem;
-    flex-grow: flex 1;
-    flex-basis: calc(33% - 6rem);
+    flex-grow: 1;
+    perspective: 1000px;
+    position: relative;
 }
 
-.cartao__conteudo {
-    background-color: var(--card-back-color);
+.cartao_conteudo {
+    background: var(--card-front-color);
     text-align: center;
     /* background-color: aquamarine; */
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
+    position: relative;
 }
 
 .cartao__conteudo h3 {
@@ -48,8 +51,6 @@ body {
 .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
-    margin-top: 4rem;
-    font-size: 1.4vw;
 }
 
 .cartao__conteudo__pergunta p {
@@ -70,15 +71,20 @@ body {
 .cartao__conteudo__resposta {
     backface-visibility: hidden;
     position: absolute;
-    height: 100%;
     width: 100%;
-    box-sizing:border-box;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
-    background-color:rgba(0, 244, 191, alpha0.2) ;
-    border:4px solid var(--card-back-color);
+    background-color: rgba(0, 244, 191, alpha0.2);
+    border: 4px solid var(--card-back-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -103,7 +109,7 @@ footer {
 
 footer p {
     text-align: center;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     margin-top: 0.5rem;
 }
 
@@ -116,10 +122,10 @@ footer p {
 }
 
 .cartao {
-        flex: 1 0 calc(100% - 1rem);
-    }
+    flex: 1 0 calc(100% - 1rem);
+}
 
-    .cartao__conteudo h3 {
+.cartao__conteudo h3 {
     font-size: 3vw;
 }
 
