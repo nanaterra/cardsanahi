@@ -1,6 +1,6 @@
 criaCartao(
     'Geografia',
-    'Qual a capital da Tailândia?',
+     'Qual a capital da Tailândia?',
     'A capital da Tailândia é Bangkok'
 );
 
@@ -14,4 +14,10 @@ criaCartao(
     'Geografia',
     'Como é composto o alfabeto tailandês?',
     'É composto por 44 consoantes e 15 vogais'
-);
+   );
+
+   criaCartao(
+    'Geografia',
+    'Como é composto o alfabeto chinês?',
+    'É composto por 44 consoantes e 15 vogais'
+   );
